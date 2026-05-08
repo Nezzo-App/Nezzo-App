@@ -2,10 +2,18 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
-dist/
-build/
-target/
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
 
 # Python
 __pycache__/
@@ -16,43 +24,50 @@ __pycache__/
 env/
 venv/
 .venv/
-.ENV
-.env
-.env.local
-.env.*
-.env.local.*
-.env.vault
-.python-version
-.pytest_cache/
-.mypy_cache/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
 .coverage
-htmlcov/
 .coverage.*
-
-# Logs
+.cache
+nosetests.xml
+coverage.xml
+*.cover
 *.log
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
 .DS_Store
 Thumbs.db
 
-# Docker
-.dockerenv
-!Dockerfile
-!docker-compose.yml
+# Build artifacts
+dist/
+build/
+*.egg-info/
+.eggs/
+eggs/
+parts/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+area/
+include/
+share/
+tmp/
+wheels/
+
+# Testing
+.pytest_cache/
+.hypothesis/
+cover/
+
+# CI/CD
+.github/
 
 # Compressed files
 *.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
 *.gz
-*.tar
-*.tgz
 *.bz2
 *.xz
 *.7z
@@ -67,8 +82,4 @@ Thumbs.db
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
 ```
