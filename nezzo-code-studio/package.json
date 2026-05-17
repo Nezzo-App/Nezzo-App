@@ -1,0 +1,52 @@
+{
+  "name": "nezzo-code-studio",
+  "version": "1.0.0",
+  "description": "Nezzo Code Studio - Next-Gen AI-Powered IDE",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "echo 'Installation complete'"
+  },
+  "author": "Nezzo Studios",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "axios": "^1.6.2"
+  },
+  "build": {
+    "appId": "com.nezzo.codestudio",
+    "productName": "Nezzo Code Studio",
+    "icon": "src/assets/icon.ico",
+    "directories": {
+      "output": "build/dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "src/assets/icon.ico",
+      "artifactName": "NezzoCodeStudio-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "src/assets/icon.ico",
+      "uninstallerIcon": "src/assets/icon.ico",
+      "installerHeaderIcon": "src/assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Nezzo Code Studio",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": null
+  }
+}
